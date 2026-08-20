@@ -61,7 +61,7 @@ function App() {
     <div className="app-shell">
       <aside className={`sidebar ${menuOpen ? 'sidebar-open' : ''}`}>
         <div className="brand"><span className="brand-mark"><Sparkles size={16} /></span><span>campus<span className="brand-accent">connect</span></span><button className="icon-button mobile-close" onClick={() => setMenuOpen(false)} aria-label="Close menu"><X size={20} /></button></div>
-        <div className="profile-switcher"><div className="avatar avatar-lime">AR</div><div><strong>Alex Rivera</strong><span>Student account</span></div><ChevronDown size={16} /></div>
+        <div className="profile-switcher"><div className="avatar avatar-lime">AR</div><div><strong> student </strong><span>Student account</span></div><ChevronDown size={16} /></div>
         <nav className="primary-nav" aria-label="Main navigation">
           <span className="nav-label">Workspace</span>
           {navItems.map(({ label, icon: Icon }) => <button key={label} className={`nav-item ${activeNav === label ? 'active' : ''}`} onClick={() => { setActiveNav(label); setMenuOpen(false) }}><Icon size={18} /><span>{label}</span>{label === 'Messages' && <b className="nav-count">3</b>}</button>)}
@@ -72,7 +72,7 @@ function App() {
       <main className="main-content">
         <header className="topbar"><button className="icon-button menu-trigger" onClick={() => setMenuOpen(true)} aria-label="Open menu"><Menu size={21} /></button><div className="breadcrumb"><span>Workspace</span><span>/</span><strong>{activeNav}</strong></div><div className="topbar-actions"><label className="search-box"><Search size={17} /><input placeholder="Search campus" aria-label="Search campus" /></label><button className="icon-button notification" aria-label="Notifications"><Bell size={19} /><span /></button><div className="avatar avatar-coral avatar-small">AR</div></div></header>
         <div className="content-wrap">
-          <section className="welcome-row"><div><p className="eyebrow">Friday, April 18, 2025</p><h1>Good morning, Alex <span className="wave">✦</span></h1><p className="subtitle">Here&apos;s what&apos;s happening around your campus today.</p></div><button className="primary-button"><Plus size={17} />Create something</button></section>
+          <section className="welcome-row"><div><p className="eyebrow">Friday, April 18, 2025</p><h1>Good morning,student <span className="wave">✦</span></h1><p className="subtitle">Here&apos;s what&apos;s happening around your campus today.</p></div><button className="primary-button"><Plus size={17} />Create something</button></section>
 
           <section className="hero-banner"><div className="hero-copy"><span className="hero-kicker">Your campus, in sync</span><h2>Find your people.<br /><em>Make your mark.</em></h2><p>Stay close to the clubs, events, and conversations that make campus feel like home.</p><button className="light-button" onClick={() => setActiveNav('Discover')}>Explore campus <ArrowUpRight size={16} /></button></div><div className="hero-art"><div className="sun-disc" /><div className="art-card art-card-one"><Users size={18} /><strong>12,480</strong><span>students connected</span></div><div className="art-card art-card-two"><div className="mini-avatars"><i>JT</i><i>MK</i><i>SL</i></div><span>your community is here</span></div><div className="orbit orbit-one" /><div className="orbit orbit-two" /></div></section>
 
